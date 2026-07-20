@@ -1,0 +1,230 @@
+{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, #ffe4ef, transparent 35%),
+    linear-gradient(135deg, #fff7fb, #ffe1ec, #fff0c9);
+  color: #42212e;
+  font-family: Georgia, serif;
+}
+
+.app-shell {
+  width: min(1050px, 92%);
+  margin: 30px auto;
+}
+
+.hero,
+.mascot-zone,
+.scoreboard,
+.controls,
+.battle-stage,
+.poem-panel,
+.about {
+  border: 2px solid #ff8fab;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 16px 35px rgba(196, 64, 100, 0.12);
+}
+
+.hero {
+  text-align: center;
+  background: #ffe4ec;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: clamp(42px, 8vw, 86px);
+  margin: 0;
+  color: #b5164f;
+  line-height: 0.95;
+}
+
+h2 {
+  color: #b5164f;
+  margin-top: 0;
+}
+
+h3 {
+  color: #c9184a;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+p,
+li,
+label,
+select,
+button {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.intro {
+  font-size: 24px;
+}
+
+.mascot-zone {
+  text-align: center;
+}
+
+.berrybelle {
+  display: block;
+  width: min(300px, 90%);
+  margin: 0 auto 18px;
+  border: 2px solid #ff8fab;
+  border-radius: 28px;
+}
+
+.emoji-mascot {
+  display: none;
+  font-size: 90px;
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 18px;
+  align-items: center;
+  text-align: center;
+}
+
+.versus {
+  background: #ff8fab;
+  color: white;
+  border-radius: 999px;
+  padding: 18px 22px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.controls {
+  text-align: center;
+}
+
+.select-row {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 10px;
+}
+
+select,
+button {
+  border: 2px solid #ff8fab;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: white;
+  color: #9f1239;
+}
+
+button {
+  cursor: pointer;
+  background: #ff8fab;
+  color: white;
+  font-weight: bold;
+  margin: 10px 6px 0;
+}
+
+button:hover {
+  background: #c9184a;
+}
+
+.battle-stage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.recipe-card {
+  min-height: 260px;
+  border: 2px dashed #ff8fab;
+  border-radius: 24px;
+  padding: 22px;
+  background: #fff7fb;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.recipe-card.bounce {
+  transform: translateY(-12px) rotate(-1deg) scale(1.03);
+  background: #fff0c9;
+}
+
+.recipe-card ul {
+  padding-left: 24px;
+}
+
+.tagline {
+  font-style: italic;
+}
+
+.poem-panel {
+  text-align: center;
+  overflow: hidden;
+}
+
+.poem-panel p {
+  font-size: clamp(24px, 4vw, 42px);
+  margin: 12px 0;
+  transition: transform 0.4s ease, letter-spacing 0.4s ease;
+}
+
+.poem-panel.explode p:nth-of-type(1) {
+  transform: translateX(-28px) rotate(-2deg);
+}
+
+.poem-panel.explode p:nth-of-type(2) {
+  transform: translateX(32px) rotate(2deg);
+}
+
+.poem-panel.explode p:nth-of-type(3) {
+  transform: translateX(-18px) rotate(1deg);
+}
+
+.poem-panel.explode p:nth-of-type(4) {
+  transform: translateX(22px) rotate(-1deg);
+  letter-spacing: 4px;
+}
+
+#winnerBanner {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 22px;
+  background: #ffe4ec;
+  color: #9f1239;
+  border: 2px solid #ff8fab;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.about {
+  background: #fffafc;
+}
+
+@media (max-width: 760px) {
+  .scoreboard,
+  .battle-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .versus {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .select-row {
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
