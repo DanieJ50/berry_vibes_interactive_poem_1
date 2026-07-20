@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berry Vibes Studio Interactive Poem</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="app-shell">
+
+    <header class="hero">
+      <p class="eyebrow">Assignment 4 · Interactive Poem</p>
+      <h1>Berry Vibes Battle</h1>
+      <p class="intro">
+        Choose two cozy recipes. Let them battle. Watch the poem change.
+      </p>
+    </header>
+
+    <section class="mascot-zone" aria-label="BerryBelle mascot area">
+      <img
+        src="images/BerryBelle.jpg"
+        alt="BerryBelle, the Berry Vibes Studio mascot"
+        class="berrybelle"
+        onerror="this.style.display='none'; document.querySelector('.emoji-mascot').style.display='block';"
+      >
+      <div class="emoji-mascot" aria-hidden="true">🍓🥛✨</div>
+      <p>
+        BerryBelle is judging the battle with extreme strawberry authority.
+      </p>
+    </section>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div>
+        <h2 id="leftName">Recipe One</h2>
+        <p id="leftScore">0 points</p>
+      </div>
+
+      <div class="versus">VS</div>
+
+      <div>
+        <h2 id="rightName">Recipe Two</h2>
+        <p id="rightScore">0 points</p>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="Recipe choices">
+      <h2>Pick Your CCD Recipe Fighters</h2>
+
+      <div class="select-row">
+        <label for="leftRecipe">Left Recipe</label>
+        <select id="leftRecipe"></select>
+      </div>
+
+      <div class="select-row">
+        <label for="rightRecipe">Right Recipe</label>
+        <select id="rightRecipe"></select>
+      </div>
+
+      <button id="battleButton">Start Battle 🍓</button>
+      <button id="shuffleButton">Shuffle Fighters 🔀</button>
+      <button id="resetButton">Reset Poem ✨</button>
+    </section>
+
+    <section class="battle-stage" aria-label="Recipe battle cards">
+      <article class="recipe-card" id="leftCard">
+        <h3>Choose a recipe</h3>
+        <p class="tagline">Waiting for BerryBelle...</p>
+        <ul></ul>
+      </article>
+
+      <article class="recipe-card" id="rightCard">
+        <h3>Choose a recipe</h3>
+        <p class="tagline">Waiting for BerryBelle...</p>
+        <ul></ul>
+      </article>
+    </section>
+
+    <section class="poem-panel" aria-label="Interactive poem">
+      <h2>The Poem</h2>
+
+      <p id="poemLineOne">A soft kitchen screen glows pink.</p>
+      <p id="poemLineTwo">Two recipes step into the light.</p>
+      <p id="poemLineThree">One craving becomes a story.</p>
+      <p id="poemLineFour">One click becomes a bite.</p>
+
+      <div id="winnerBanner">Tap Start Battle to begin.</div>
+    </section>
+
+    <section class="about">
+      <h2>Artist Statement</h2>
+      <p>
+        This interactive poem turns my CCD recipes into a playful comparison battle inspired by Berry Vibes Studio. Each click changes the poem, score, and visual layout, showing how food, design, comfort, and creativity can become a small game-like story.
+      </p>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
